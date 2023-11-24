@@ -1,0 +1,609 @@
+/*WAP to print grade of a student using following rules :
+Percentage >70 means Grade A
+Percentage 60-70 means Grade B
+Percentage 50-60 means Grade C
+Percentage <50 means Grade F*/
+
+import java.util.*;
+class Num1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter your marks out of 100:");
+        int m= sc.nextInt();
+
+        if(m>70)
+        {
+            System.out.println("Grade A");
+        }
+        else if(m<=70 && m>60)
+        {
+            System.out.println("Grade B");
+        }
+        else if(m<=60 && m>50)
+        {
+            System.out.println("Grade C");
+        }
+        else
+        {
+            System.out.println("Grade F");
+        }
+    }
+}
+
+
+/* WAP to accept three numbers from user and Print Maximum number using nested if else.
+ */
+ 
+ import java.util.*;
+class Num2
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number 1:");
+        int a=sc.nextInt();
+
+        System.out.print("Enter number 2:");
+        int b=sc.nextInt();
+
+        System.out.print("Enter number 3:");
+        int c=sc.nextInt();
+
+        if(a>b)
+        {
+            if(a>c)
+            {
+                System.out.println("Number 1 is maximum");
+            }
+            else
+            {
+                System.out.println("Number 3 is maximum");
+            }
+        }
+        else
+        {
+            if(b>c)
+            {
+                System.out.println("Number 2 is maximum");
+            }
+            else
+            {
+                System.out.println("NUmber 3 is maximum");
+            }
+        }
+    }
+}
+
+/* WAP to enter a character and check whether it is a vowel or consonant using switch
+statement. */
+
+import java.util.*;
+class Num3
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter character:");
+        char c=sc.next().charAt(0);
+
+        switch (c)
+        {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                System.out.println("Vowel");
+                break;
+            default:
+                System.out.println("Consonant");
+                break;
+        }
+    }
+}
+
+/* WAP to print multiple of N from given range of integers. For example, if N=5 and range is
+[17, 45]
+it prints 20, 25, 30, 35, 40, 45. Take input using Scanner class */
+
+
+import java.util.*;
+class Num4
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter upper limit:");
+        int ul=sc.nextInt();
+        System.out.print("Enter lower limit:");
+        int ll=sc.nextInt();
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+        System.out.print("Multiples of n:");
+        for(int i=ll;i<=ul;i++)
+        {
+            if(i%n==0)
+            {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
+
+/* WAP to count ODD and EVEN numbers from given 10 numbers */
+
+import java.util.*;
+class Num5
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a[]=new int[10];
+        int count_e=0;
+        int count_o=0;
+        for(int i=0;i<10;i++)
+        {
+            System.out.print("Enter number "+(i+1)+":");
+            a[i]=sc.nextInt();
+            if(a[i]%2==0)
+            {
+                count_e++;
+            }
+            else
+            {
+                count_o++;
+            }
+        }
+        System.out.println("Even numbers:"+count_e+"\nOdd numbers:"+count_o);
+    }
+}
+
+/* WAP to check whether the given number is Prime or not. */
+
+import java.util.*;
+class Num6
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter your number:");
+        int n=sc.nextInt();
+        boolean prime=true;
+        for(int i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            {
+                prime=false;
+                break;
+            }
+        }
+        if(prime)
+        {
+            System.out.println("Prime number");
+        }
+        else
+        {
+            System.out.println("Not a prime number");
+        }
+    }
+}
+
+
+/* WAP to find out Armstrong Numbers from a given number. (Given number should be any
+digit). */
+
+import java.util.*;
+class Num7
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number:");
+        int n=sc.nextInt();
+        int temp=n;
+        int count=0;
+        for(int i=n;i>0;i/=10)
+        {
+            count++;
+        }
+        double arms=0;
+        for(int i=n;i>0;i/=10)
+        {
+            int d=i%10;
+            arms+=Math.pow(d,count);
+        }
+
+        if(arms==temp)
+        {
+            System.out.println("Is an armstrong number");
+        }
+        else
+        {
+            System.out.println("Not an armstrong nmber");
+        }
+    }
+}
+
+
+/* WAP to generate Fibonacci series of numbers.
+ */
+ 
+ import java.util.*;
+class Num8
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+        int a=0;
+        int b=1;
+        int c;
+        System.out.print(a+" ");
+        System.out.print(b+" ");
+        for(int i=1;i<=n-2;i++)
+        {
+            c=a+b;
+            a=b;
+            b=c;
+            System.out.print(c+" ");
+        }
+    }
+}
+
+/* WAP to find out sum of first and last digit of a given number
+ */
+
+import java.util.*;
+class Num9
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number:");
+        int n=sc.nextInt();
+        int l_n=n%10;
+        int f_n=0;
+        for(int i=n;n>0;n/=10)
+        {
+            f_n=n%10;
+        }
+
+        System.out.println("The sum of first and last digits is "+(l_n+f_n));
+    }
+}
+
+/* WAP to print following pattern using loop statement for n row.
+1
+1 3
+1 3 5
+1 3 5 7
+ */
+
+import java.util.*;
+class Num10
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j%2!=0)
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* WAP to print following pattern using loop statement for n row.
+*
+# #
+* * *
+# # # #
+* * * * *
+# # # # # #
+* * * * * * * */
+
+import java.util.*;
+class Num11
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            if(i%2==0)
+            {
+                for(int j=1;j<=i;j++)
+                {
+                    System.out.print("#");
+                }
+                System.out.println();
+            }
+            else
+            {
+                for(int j=1;j<=i;j++)
+                {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
+
+/* WAP to print following pattern using loop statement for n row.
+1
+0 1
+1 0 1
+0 1 0 1
+ */
+
+import java.util.*;
+class Num12
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=i;j>=1;j--)
+            {
+                if(j%2==0)
+                {
+                    System.out.print("0");
+                }
+                else
+                {
+                    System.out.print("1");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+ /* WAP to print following pattern using loop statement for n row.
+1
+2 3
+4 5 6
+7 8 9 10 */
+
+import java.util.*;
+class Num13
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+        int a=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(a);
+                a++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* 
+WAP to print following pattern using loop statement for n row.
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+ */
+ 
+ import java.util.*;
+class Num14
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+ 
+
+/* WAP to check given string is palindrome or not.
+ */
+
+import java.util.*;
+class Num15
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter string:");
+        String s=sc.nextLine();
+        String rev="";
+
+        for(int i=s.length()-1;i>=0;i--)
+        {
+            rev+=s.charAt(i);
+        }
+
+        if(s.equalsIgnoreCase(rev))
+        {
+            System.out.println("Its a palindrome");
+        }
+        else
+        {
+            System.out.println("Not a palindrome");
+        }
+    }
+}
+
+/*  WAP to accept a string and count the number of vowels present in a string.
+ */ 
+ 
+ import java.util.*;
+class Num16
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter your string:");
+        String s=sc.nextLine();
+        int count=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.toLowerCase().charAt(i)=='a'||s.toLowerCase().charAt(i)=='e'||s.toLowerCase().charAt(i)=='i'||s.toLowerCase().charAt(i)=='o'||s.toLowerCase().charAt(i)=='u')
+            {
+                count++;
+            }
+        }
+        System.out.println("Number of vowels:"+count);
+    }
+}
+ 
+ 
+/*  WAP to swap two numbers without using temporary variable.
+ */ 
+ 
+ import java.util.*;
+class Num17
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a:");
+        int a=sc.nextInt();
+        System.out.print("Enter b:");
+        int b= sc.nextInt();
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println("a and b are "+a+" and "+b);
+    }
+}
+ 
+/* WAP that determines if a year is a leap year or not by using if…else.
+ */
+
+import java.util.*;
+class Num18
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter year:");
+        int yr=sc.nextInt();
+
+        if(yr%4==0 || (yr%100==0 && yr%400==0))
+        {
+            System.out.println("It's a leap year");
+        }
+        else
+        {
+            System.out.println("Not a leap year");
+        }
+    }
+}
+
+/*  WAP to find 1+3/5+5/7+7/9+... series. Print addition of first N part.
+ */ 
+ 
+ import java.util.Scanner;
+
+class Num19
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter n:");
+        int n=sc.nextInt();
+        double a=3;
+        double sum=0;
+        for(int i=1;i<=n-1;i++,a=a+2)
+        {
+            sum+=(a/(a+2));
+        }
+        System.out.println("Sum:"+(1+sum));
+    }
+}
+ 
+/*  Write JAVA program to add two 1-D array elements in third 1-D array.
+ */ 
+ 
+ import java.util.*;
+class Num20
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter row for both the matrix:");
+        int r=sc.nextInt();
+
+        System.out.print("Enter columns for both the matrix:");
+        int c=sc.nextInt();
+
+        int a[][]=new int[r][c];
+        int b[][]=new int[r][c];
+        int d[][]=new int[r][c];
+
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                System.out.print("Enter first matrix's row "+(i+1)+" column "+(j+1)+" element:");
+                a[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println();
+
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                System.out.print("Enter second matrix's row "+(i+1)+" column "+(j+1)+" element:");
+                b[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println();
+
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                d[i][j]+=a[i][j]+b[i][j];
+                System.out.print(d[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}

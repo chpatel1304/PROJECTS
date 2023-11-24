@@ -1,0 +1,79 @@
+1. Introduction 
+
+2. Team Members Intro
+ 
+3. Short overview of rom (full form , short defination, used in ,etc.)
+
+Read-only memory	
+Read-only memory is a type of non-volatile memory, stays permanenetat, normally, can only be read, not written to.
+ROM contains the programming that allows a computer to start up or regenerate each time it is turned on.
+It is used in every devices in which we have to store data 
+
+4.History
+
+The concept of read-only memory (ROM) was first introduced by Robert Dennard in the 1960s. Dennard was a researcher at IBM and the inventor of dynamic random-access memory (DRAM), a type of memory that is used in computers and other electronic devices to store data temporarily.
+The very first ROMs were hard-wired devices that contained a pre-programmed set of data or instructions. These kind of ROMs are known as masked ROMs, which are inexpensive.
+MROMs were the first ROMs to be developed and were hard wired, contain a pre-programmed set of instructions or data. During the design phase in the manufacturing process of a MROM, a software mask is burned directly onto the chip.
+
+Image 
+
+5. Types Of ROM
+ROMs are of five types: MROM (masked read only memory), PROM (programmable read only memory), EPROM (erasable programmable read only memory), EEPROM (electrically erasable programmable read only memory), and Flash Memory. 
+
+6.Discription of MROM
+ MROM : Mask ROM (MROM) chips are used in computer systems that require long-term sustainability.Examples of computer systems that use Mask ROM chips or MROM chips include network operating systems and server operating systems.
+  To produce Mask ROM (MROM) chips, integrated circuits (ICs) are masked during the design phase of the semiconductor fabrication process. In its simplest form, a semiconductor is defined as a material that is half-conductive and half-insular, and that can be altered by electrical impulses
+  
+7.Discription of PROM
+ PROM : The full form of PROM is Programmable Read-Only Memory. The full form of EPROM is Erasable Programmable Read-Only Memory. The full form of EEPROM is Electrically Erasable Programmable Read-Only Memory.
+ An example of a PROM is a computer BIOS in early computers.
+ PROM memory is non-volatile and may be written only once. A programmable read-only memory (PROM) or field programmable read-only memory (FPROM) or one-time programmable non-volatile memory (OTP NVM) is a form of digital memory where the setting of each bit is locked by a fuse or antifuse.
+
+8.Discription of EPROM
+ EPROM : EPROM, in full erasable programmable read-only memory, form of computer memory that does not lose its content when the power supply is cut off and that can be erased and reused. EPROMs are generally employed for programs designed for repeated use but that can be upgraded with a later version of a program.
+  An EPROM (rarely EROM), or erasable programmable read-only memory, is a type of programmable read-only memory (PROM) chip that retains its data when its power supply is switched off.
+ EPROM is non-volatile so it retains its memory even without power. So no external memory is required. EPROM is quite effective.
+ Examples of EPROMs you can hold in your hand include compact flash, smart memory, memory sticks etc.
+
+9.Discription of EEPROM
+  EEPROM is a type of non-volatile ROM that enables individual bytes of data to be erased and reprogrammed.That is why EEPROM chips are known as byte erasable chips. EEPROM is usually used to store small amounts of data in computing and other electronic devices.
+ EEPROM (also called E2PROM) stands for electrically erasable programmable read-only memory and is a type of non-volatile memory used in computers.
+ EEPROM is mainly used in devices (like digital potentiometers, digital temperature sensors and real-time clocks) to save calibration or similar data that is required when the power is switched off or removed.
+ RAM (Random Access Memory) is typically volatile, meaning that if the power goes away so does the memory's contents.The big advantage with RAM is that the access time for read and write is far faster than any EPROM or EEPROM.
+ Flash memory is a type of EEPROM designed for high speed and high density, at the expense of large erase blocks (typically 512 bytes or larger) and limited number of write cycles (often 10,000).
+ EEPROM array of size 512 bytes, 1 KB or 2 KB depending on the device. 
+
+10.Description of flash memory
+ Flash memory, also known as flash storage, is a type of nonvolatile memory that erases data in units called blocks and rewrites data at the byte level. Flash memory is widely used for storage and data transfer in consumer devices, enterprise systems and industrial applications.
+ Flash memory is a long-life and non-volatile storage chip that is widely used in embedded systems.
+ The most common types of flash memory are SD, micro SD, and compact flash. Memory cards and USB drives are in widespread use and are ideal for a wide range of applications.
+ Flash memory is also known as flash storage. Flash memory is a type of non-volatile memory that can be erased and reprogrammed.
+ No, flash memory is not the same as RAM. RAM is volatile and only stores data while the power is on, while flash memory is non-volatile and stores data even when the power is off.
+
+11. Difference between ROM&PROM
+::ROM stands for read-only memory, While PROM stands for programmable read-only memory.
+
+12. Difference between PROM&EPROM
+ ::PROM is a written type of ROM. This memory is written only once by the user and electrically programmed at that time. EPROM is a type of ROM that can be written and read optically.
+
+13. Advantages of ROM
+==Its static nature means it does not require refreshing.
+==It is easy to test.
+==ROM is more reliable than RAM since it is non-volatile in nature and cannot be altered or accidentally changed.
+==The contents of the ROM can always be known and verified.
+==Less expensive than RAM.
+
+14.Disadvantages of ROM
+==One of the most significant disadvantages of ROM is its slow speed and inability to store large amounts of information.
+==If an MROM contains a design error, you cannot use it, and the code requires replacement.
+==After burning or programming a PROM chip, you cannot erase or change its data.
+==ROM is a slower type of Memory.
+==ROM Memory is capable of reading data only, cannot be changed the ROM data.
+
+15.Uses of ROM
+ ROM provides the necessary instructions for communication between various hardware components. As mentioned before, it is essential for the storage and operation of the BIOS, but it can also be used for basic data management, to hold software for basic processes of utilities and to read and write to peripheral devices.
+
+16.Features of ROM
+
+17.Thank you!!!!!
+

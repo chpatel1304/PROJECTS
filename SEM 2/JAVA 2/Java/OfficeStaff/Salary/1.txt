@@ -1,0 +1,6 @@
+=============================================================
+| Employee ID :1
+| Employee NAME:Yasvi
+| MONTH       SALARY      BONUS       DAYS ABSENT     FINAL SALARY
+September|     200000      0               6             195000
+=============================================================

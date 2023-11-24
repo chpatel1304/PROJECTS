@@ -1,0 +1,277 @@
+
+1) CREATE TABLE EMPLOYEE(E_ID INT PRIMARY KEY,E_FIRSTNAME VARCHAR(30),E_LASTNAME VARCHAR(30),E_AGE INT,E_MAIL VARCHAR(40),E_NUMBER VARCHAR(30),E_DOB DATE);
+
+2) CREATE TABLE ADMINISTRATION(A_ID INT PRIMARY KEY,A_FIRSTNAME VARCHAR(30),A_LASTNAME VARCHAR(30),A_AGE INT,A_EMAIL VARCHAR(40),A_NUMBER VARCHAR(30),A_DOB DATE);
+
+3) CREATE TABLE EMP_DESIGNATION(EMP_D_ID INT PRIMARY KEY,E_ID INT CONSTRAINT EMP_DESI FOREIGN KEY(E_ID) REFERENCES EMPLOYEE(E_ID),E_DESIGNATION VARCHAR(50),E_SALARY NUMERIC,E_JOININGDATE DATE,E_PREVIOUSCOMPANY VARCHAR(30));
+ 
+4) CREATE TABLE ADMIN_DESIGNATION(ADM_D_ID INT PRIMARY KEY,A_ID INT CONSTRAINT ADMIN_DESI FOREIGN KEY(A_ID) REFERENCES ADMINISTRATION(A_ID),A_DESIGNATION VARCHAR(50),A_SALARY NUMERIC,A_PREVIOUSPOST VARCHAR(30),A_PREVIOUSCOMPANY VARCHAR(30));
+
+5) INSERT INTO employee (E_ID, E_FIRSTNAME, E_LASTNAME, E_AGE, E_MAIL, E_NUMBER, E_DOB)
+VALUES
+  (1, 'Amit', 'Kumar', 28, 'amit.kumar@example.com', '9876543210', '1995-07-15'),
+  (2, 'Priya', 'Sharma', 32, 'priya.sharma@example.com', '8765432109', '1990-02-25'),
+  (3, 'Rajesh', 'Patel', 35, 'rajesh.patel@example.com', '7654321098', '1987-11-10'),
+  (4, 'Neha', 'Singh', 29, 'neha.singh@example.com', '6543210987', '1994-09-20'),
+  (5, 'Suresh', 'Gupta', 40, 'suresh.gupta@example.com', '5432109876', '1983-04-05'),
+  (6, 'Anjali', 'Verma', 26, 'anjali.verma@example.com', '4321098765', '1997-12-30'),
+  (7, 'Arun', 'Yadav', 31, 'arun.yadav@example.com', '3210987654', '1991-06-18'),
+  (8, 'Pooja', 'Thakur', 27, 'pooja.thakur@example.com', '2109876543', '1996-08-22'),
+  (9, 'Rahul', 'Rajput', 33, 'rahul.rajput@example.com', '1098765432', '1989-03-14'),
+  (10, 'Shikha', 'Srivastava', 30, 'shikha.srivastava@example.com', '0987654321', '1992-10-08'),
+  (11, 'Amitabh', 'Mishra', 37, 'amitabh.mishra@example.com', '9876543210', '1986-01-28'),
+  (12, 'Geeta', 'Kumari', 25, 'geeta.kumari@example.com', '8765432109', '1998-07-02'),
+  (13, 'Rajendra', 'Choudhury', 34, 'rajendra.choudhury@example.com', '7654321098', '1988-09-12'),
+  (14, 'Manju', 'Saxena', 28, 'manju.saxena@example.com', '6543210987', '1995-05-27'),
+  (15, 'Hari', 'Goswami', 29, 'hari.goswami@example.com', '5432109876', '1994-03-08'),
+  (16, 'Meera', 'Pandey', 36, 'meera.pandey@example.com', '4321098765', '1986-10-17'),
+  (17, 'Vikas', 'Tiwari', 32, 'vikas.tiwari@example.com', '3210987654', '1990-08-13'),
+  (18, 'Suman', 'Joshi', 30, 'suman.joshi@example.com', '2109876543', '1992-12-03'),
+  (19, 'Rakesh', 'Shukla', 38, 'rakesh.shukla@example.com', '1098765432', '1985-02-09'),
+  (20, 'Nisha', 'Gandhi', 27, 'nisha.gandhi@example.com', '0987654321', '1996-04-14'),
+  (21, 'Deepak', 'Rathore', 31, 'deepak.rathore@example.com', '9876543210', '1991-11-21'),
+  (22, 'Anita', 'Chauhan', 29, 'anita.chauhan@example.com', '8765432109', '1993-09-19'),
+  (23, 'Sunil', 'Yadav', 35, 'sunil.yadav@example.com', '7654321098', '1988-05-06'),
+  (24, 'Aarti', 'Sharma', 26, 'aarti.sharma@example.com', '6543210987', '1997-03-29'),
+  (25, 'Rajat', 'Srivastava', 33, 'rajat.srivastava@example.com', '5432109876', '1989-08-11'),
+  (26, 'Savita', 'Verma', 30, 'savita.verma@example.com', '4321098765', '1992-02-16'),
+  (27, 'Alok', 'Gupta', 29, 'alok.gupta@example.com', '3210987654', '1994-10-23'),
+  (28, 'Kavita', 'Mishra', 31, 'kavita.mishra@example.com', '2109876543', '1991-07-07'),
+  (29, 'Manish', 'Kumar', 28, 'manish.kumar@example.com', '1098765432', '1995-01-12'),
+  (30, 'Neelam', 'Yadav', 34, 'neelam.yadav@example.com', '0987654321', '1988-06-04'),
+  (31, 'Vijay', 'Sharma', 27, 'vijay.sharma@example.com', '9876543210', '1996-09-25'),
+  (32, 'Poonam', 'Saxena', 29, 'poonam.saxena@example.com', '8765432109', '1993-04-19'),
+  (33, 'Sanjay', 'Choudhury', 36, 'sanjay.choudhury@example.com', '7654321098', '1987-12-15'),
+  (34, 'Meenakshi', 'Pandey', 31, 'meenakshi.pandey@example.com', '6543210987', '1991-08-07'),
+  (35, 'Rajesh', 'Tiwari', 28, 'rajesh.tiwari@example.com', '5432109876', '1995-03-02'),
+  (36, 'Nandini', 'Joshi', 32, 'nandini.joshi@example.com', '4321098765', '1990-10-14'),
+  (37, 'Pradeep', 'Shukla', 29, 'pradeep.shukla@example.com', '3210987654', '1993-11-28'),
+  (38, 'Shalini', 'Gandhi', 34, 'shalini.gandhi@example.com', '2109876543', '1988-07-09'),
+  (39, 'Amit', 'Rathore', 26, 'amit.rathore@example.com', '1098765432', '1997-05-31'),
+  (40, 'Anju', 'Chauhan', 28, 'anju.chauhan@example.com', '0987654321', '1995-09-24'),
+  (41, 'Rohit', 'Yadav', 30, 'rohit.yadav@example.com', '9876543210', '1993-02-04'),
+  (42, 'Suman', 'Sharma', 29, 'suman.sharma@example.com', '8765432109', '1994-06-11'),
+  (43, 'Sanjeev', 'Kumar', 35, 'sanjeev.kumar@example.com', '7654321098', '1987-10-29'),
+  (44, 'Preeti', 'Singh', 27, 'preeti.singh@example.com', '6543210987', '1996-01-07'),
+  (45, 'Alok', 'Verma', 33, 'alok.verma@example.com', '5432109876', '1989-04-13'),
+  (46, 'Anita', 'Yadav', 31, 'anita.yadav@example.com', '4321098765', '1991-09-03'),
+  (47, 'Rajesh', 'Srivastava', 29, 'rajesh.srivastava@example.com', '3210987654', '1994-12-16'),
+  (48, 'Sunita', 'Gupta', 36, 'sunita.gupta@example.com', '2109876543', '1986-03-20'),
+  (49, 'Amitabh', 'Choudhury', 28, 'amitabh.choudhury@example.com', '1098765432', '1995-08-27'),
+  (50, 'Swati', 'Pandey', 30, 'swati.pandey@example.com', '0987654321', '1993-01-19');
+
+
+6) insert into administration values 
+ (1, 'Aarav', 'Kumar', 25, 'aarav.kumar@example.com', '+91-9876543210', '1998-03-15')
+ ,(2, 'Aditi', 'Sharma', 28, 'aditi.sharma@example.com', '+91-8765432109', '1995-06-25')
+, (3, 'Akshay', 'Patel', 30, 'akshay.patel@example.com', '+91-7654321098', '1992-11-10')
+, (4, 'Alisha', 'Singh', 24, 'alisha.singh@example.com', '+91-6543210987', '1999-08-04')
+, (5, 'Amit', 'Verma', 29, 'amit.verma@example.com', '+91-5432109876', '1994-04-20')
+, (6, 'Ananya', 'Joshi', 27, 'ananya.joshi@example.com', '+91-4321098765', '1996-09-12')
+, (7, 'Aniket', 'Rajput', 26, 'aniket.rajput@example.com', '+91-3210987654', '1997-12-30')
+, (8, 'Aparna', 'Gupta', 32, 'aparna.gupta@example.com', '+91-2109876543', '1990-07-08')
+, (9, 'Arjun', 'Malik', 23, 'arjun.malik@example.com', '+91-1098765432', '2000-02-18')
+, (10, 'Ashima', 'Chopra', 31, 'ashima.chopra@example.com', '+91-0987654321', '1991-05-29')
+, (11, 'Ayush', 'Rathore', 33, 'ayush.rathore@example.com', '+91-9876543210', '1989-08-07')
+, (12, 'Bhavya', 'Agarwal', 22, 'bhavya.agarwal@example.com', '+91-8765432109', '2001-01-14')
+, (13, 'Chetan', 'Pandey', 28, 'chetan.pandey@example.com', '+91-7654321098', '1995-04-03')
+, (14, 'Deepika', 'Yadav', 29, 'deepika.yadav@example.com', '+91-6543210987', '1994-10-22')
+, (15, 'Divya', 'Shah', 26, 'divya.shah@example.com', '+91-5432109876', '1997-02-08')
+, (16, 'Gaurav', 'Mehta', 27, 'gaurav.mehta@example.com', '+91-4321098765', '1996-11-16')
+, (17, 'Isha', 'Goyal', 25, 'isha.goyal@example.com', '+91-3210987654', '1998-07-24')
+, (18, 'Kartik', 'Chauhan', 30, 'kartik.chauhan@example.com', '+91-2109876543', '1992-09-03')
+, (19, 'Kavya', 'Sinha', 24, 'kavya.sinha@example.com', '+91-1098765432', '1999-12-11')
+, (20, 'Mehak', 'Thakur', 28, 'mehak.thakur@example.com', '+91-0987654321', '1995-03-30')
+, (21, 'Mohit', 'Sharma', 26, 'mohit.sharma@example.com', '+91-9876543210', '1997-06-19')
+, (22, 'Neha', 'Rai', 23, 'neha.rai@example.com', '+91-8765432109', '2000-11-07')
+, (23, 'Nishant', 'Bansal', 29, 'nishant.bansal@example.com', '+91-7654321098', '1994-08-25')
+, (24, 'Pooja', 'Mishra', 27, 'pooja.mishra@example.com', '+91-6543210987', '1996-01-02')
+, (25, 'Pranav', 'Kumar', 31, 'pranav.kumar@example.com', '+91-5432109876', '1991-04-14')
+, (26, 'Priya', 'Singh', 32, 'priya.singh@example.com', '+91-4321098765', '1990-09-21')
+, (27, 'Rahul', 'Yadav', 24, 'rahul.yadav@example.com', '+91-3210987654', '1999-12-30')
+, (28, 'Rajat', 'Gupta', 25, 'rajat.gupta@example.com', '+91-2109876543', '1998-03-19')
+, (29, 'Ritika', 'Choudhary', 30, 'ritika.choudhary@example.com', '+91-1098765432', '1992-06-07')
+, (30, 'Rohit', 'Sharma', 27, 'rohit.sharma@example.com', '+91-0987654321', '1996-10-15')
+, (31, 'Sakshi', 'Verma', 29, 'sakshi.verma@example.com', '+91-9876543210', '1994-07-05')
+, (32, 'Sandeep', 'Kumar', 26, 'sandeep.kumar@example.com', '+91-8765432109', '1997-02-23')
+, (33, 'Shivani', 'Rathore', 28, 'shivani.rathore@example.com', '+91-7654321098', '1995-09-10')
+, (34, 'Sneha', 'Gupta', 25, 'sneha.gupta@example.com', '+91-6543210987', '1998-12-28')
+, (35, 'Sumeet', 'Shah', 33, 'sumeet.shah@example.com', '+91-5432109876', '1989-10-03')
+, (36, 'Swati', 'Mehta', 22, 'swati.mehta@example.com', '+91-4321098765', '2001-03-11')
+, (37, 'Tanya','Singh', 30, 'tanya.singh@example.com', '+91-3210987654', '1992-08-20')
+, (38, 'Utkarsh', 'Gupta', 26, 'utkarsh.gupta@example.com', '+91-2109876543', '1997-01-17')
+, (39, 'Varun', 'Rajput', 28, 'varun.rajput@example.com', '+91-1098765432', '1995-04-26')
+, (40, 'Vidya', 'Mishra', 27, 'vidya.mishra@example.com', '+91-0987654321', '1996-11-05')
+, (41, 'Vishal', 'Chopra', 24, 'vishal.chopra@example.com', '+91-9876543210', '1999-02-14')
+, (42, 'Yash', 'Kumar', 29, 'yash.kumar@example.com', '+91-8765432109', '1994-05-22')
+, (43, 'Zoya', 'Sharma', 25, 'zoya.sharma@example.com', '+91-7654321098', '1998-10-01')
+, (44, 'Aaradhya', 'Verma', 28, 'aaradhya.verma@example.com', '+91-6543210987', '1995-07-20')
+, (45, 'Aditya', 'Joshi', 33, 'aditya.joshi@example.com', '+91-5432109876', '1989-11-29')
+, (46, 'Aishwarya', 'Rajput', 22, 'aishwarya.rajput@example.com', '+91-4321098765', '2001-04-07')
+, (47, 'Aryan', 'Gupta', 26, 'aryan.gupta@example.com', '+91-3210987654', '1997-09-15')
+, (48, 'Ishika', 'Choudhary', 27, 'ishika.choudhary@example.com', '+91-2109876543', '1996-02-23')
+, (49, 'Kabir', 'Sharma', 30, 'kabir.sharma@example.com', '+91-1098765432', '1992-07-12')
+, (50, 'Nandini', 'Verma', 28, 'nandini.verma@example.com', '+91-0987654321', '1995-01-31');
+
+7)INSERT INTO EMP_DESIGNATION  (EMP_D_ID, E_ID, E_DESIGNATION, E_SALARY, E_JOININGDATE, E_PREVIOUSCOMPANY)
+VALUES
+    (1, 1, 'HR', 50000, '2023-01-10', 'ABC Inc.'),
+    (2, 2, 'MARKETING', 55000, '2022-11-15', 'XYZ Corp.'),
+    (3, 3, 'ENGINEERS', 60000, '2022-09-20', 'Tech Solutions'),
+    (4, 4, 'DESIGNERS', 52000, '2023-03-05', 'Creative Designs'),
+    (5, 5, 'FINANCE', 58000, '2022-08-12', 'Finance World'),
+    (6, 6, 'HR', 52000, '2022-07-25', 'HR Solutions'),
+    (7, 7, 'MARKETING', 56000, '2023-02-18', 'Marketing Pro'),
+    (8, 8, 'ENGINEERS', 62000, '2022-10-30', 'Tech Innovators'),
+    (9, 9, 'DESIGNERS', 53000, '2022-12-03', 'Creative Minds'),
+    (10,10, 'FINANCE', 59000, '2022-06-08', 'Financial Experts'),
+    (11, 11, 'HR', 51000, '2023-04-22', 'HR Associates'),
+    (12, 12, 'MARKETING', 57000, '2022-05-14', 'Marketing Strategies'),
+    (13, 13, 'ENGINEERS', 63000, '2022-11-30', 'Tech Innovate'),
+    (14, 14, 'DESIGNERS', 54000, '2023-01-08', 'Design Geniuses'),
+    (15, 15, 'FINANCE', 60000, '2022-09-05', 'Financial Advisors'),
+    (16, 16, 'HR', 49000, '2022-08-10', 'HR Services'),
+    (17, 17, 'MARKETING', 58000, '2023-03-19', 'Marketing Guru'),
+    (18, 18, 'ENGINEERS', 64000, '2022-12-28', 'Tech Experts'),
+    (19, 19, 'DESIGNERS', 55000, '2022-10-15', 'Design Innovate'),
+    (20, 20, 'FINANCE', 61000, '2022-07-01', 'Financial Services'),
+    (21, 21, 'HR', 53000, '2023-05-14', 'HR Solutions Plus'),
+    (22, 22, 'MARKETING', 59000, '2022-04-25', 'Marketing Wizards'),
+    (23, 23, 'ENGINEERS', 65000, '2022-11-10', 'Tech Innovations'),
+    (24, 24, 'DESIGNERS', 56000, '2023-02-28', 'Creative Visionaries'),
+    (25, 25, 'FINANCE', 62000, '2022-08-15', 'Financial Masters'),
+    (26, 26, 'HR', 52000, '2022-07-05', 'HR Experts'),
+    (27, 27, 'MARKETING', 60000, '2023-04-10', 'Marketing Pioneers'),
+    (28, 28, 'ENGINEERS', 66000, '2022-10-20', 'Tech Creations'),
+    (29, 29, 'DESIGNERS', 57000, '2022-09-15', 'Creative Arts'),
+    (30, 30, 'FINANCE', 63000, '2022-06-22', 'Financial Pros'),
+    (31, 31, 'HR', 54000, '2023-06-12', 'HR Solutions 2.0'),
+    (32, 32, 'MARKETING', 61000, '2022-04-15', 'Marketing Innovations'),
+    (33, 33, 'ENGINEERS', 67000, '2022-11-05', 'Tech Wizards'),
+    (34, 34, 'DESIGNERS', 58000, '2023-03-10', 'Creative Designs 2.0'),
+    (35, 35, 'FINANCE', 64000, '2022-08-01', 'Financial Gurus'),
+    (36, 36, 'HR', 55000, '2022-07-20', 'HR Excellence'),
+    (37, 37, 'MARKETING', 62000, '2023-04-25', 'Marketing Pros Plus'),
+    (38, 38, 'ENGINEERS', 68000, '2022-10-10', 'Tech Innovations Plus'),
+    (39, 39, 'DESIGNERS', 59000, '2022-09-30', 'Creative Minds Plus'),
+    (40, 40, 'FINANCE', 65000, '2022-06-15', 'Financial Experts Plus'),
+    (41, 41, 'HR', 56000, '2023-07-05', 'HR Solutions 3.0'),
+    (42, 42, 'MARKETING', 63000, '2022-04-30', 'Marketing Innovations 2.0'),
+    (43, 43, 'ENGINEERS', 69000, '2022-10-05', 'Tech Wizards 2.0'),
+    (44, 44, 'DESIGNERS', 60000, '2023-03-15', 'Creative Visionaries 2.0'),
+    (45, 45, 'FINANCE', 66000, '2022-07-10', 'Financial Masters 2.0'),
+    (46, 46, 'HR', 57000, '2022-06-30', 'HR Solutions 4.0'),
+    (47, 47, 'MARKETING', 64000, '2023-08-20', 'Marketing Innovations 3.0'),
+    (48, 48, 'ENGINEERS', 70000, '2022-04-10', 'Tech Creations 2.0'),
+    (49, 49, 'DESIGNERS', 61000, '2022-09-10', 'Creative Arts 2.0'),
+    (50, 50, 'FINANCE', 67000, '2022-05-25', 'Financial Pros 2.0');
+
+8) INSERT INTO ADMIN_DESIGNATION (ADM_D_ID, A_ID, A_DESIGNATION, A_SALARY, A_PREVIOUSPOST, A_PREVIOUSCOMPANY)
+VALUES
+    (1, 1, 'MANAGER', 75000, 'JR. ENNG', 'ABC Inc.'),
+    (2, 2, 'DIRECTORS', 95000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (3, 3, 'HOD', 80000, 'JR. PRODUCER', 'Tech Solutions'),
+    (4, 4, 'PRODUCTION HEAD', 85000, 'ASS. HEAD', 'Creative Designs'),
+    (5, 5, 'SR. ENNG', 70000, 'DESIGNERS', 'Engineering World'),
+    (6, 6, 'MANAGER', 76000, 'JR. ENNG', 'Management Inc.'),
+    (7, 7, 'DIRECTORS', 96000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (8, 8, 'HOD', 81000, 'JR. PRODUCER', 'Tech Solutions'),
+    (9, 9, 'PRODUCTION HEAD', 86000, 'ASS. HEAD', 'Creative Designs'),
+    (10,10, 'SR. ENNG', 71000, 'DESIGNERS', 'Engineering World'),
+    (11, 11, 'MANAGER', 77000, 'JR. ENNG', 'Management Inc.'),
+    (12, 12, 'DIRECTORS', 97000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (13, 13, 'HOD', 82000, 'JR. PRODUCER', 'Tech Solutions'),
+    (14, 14, 'PRODUCTION HEAD', 87000, 'ASS. HEAD', 'Creative Designs'),
+    (15, 15, 'SR. ENNG', 72000, 'DESIGNERS', 'Engineering World'),
+    (16, 16, 'MANAGER', 78000, 'JR. ENNG', 'Management Inc.'),
+    (17, 17, 'DIRECTORS', 98000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (18, 18, 'HOD', 83000, 'JR. PRODUCER', 'Tech Solutions'),
+    (19, 19, 'PRODUCTION HEAD', 88000, 'ASS. HEAD', 'Creative Designs'),
+    (20, 20, 'SR. ENNG', 73000, 'DESIGNERS', 'Engineering World'),
+    (21, 21, 'MANAGER', 79000, 'JR. ENNG', 'Management Inc.'),
+    (22, 22, 'DIRECTORS', 99000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (23, 23, 'HOD', 84000, 'JR. PRODUCER', 'Tech Solutions'),
+    (24, 24, 'PRODUCTION HEAD', 89000, 'ASS. HEAD', 'Creative Designs'),
+    (25, 25, 'SR. ENNG', 74000, 'DESIGNERS', 'Engineering World'),
+    (26, 26, 'MANAGER', 80000, 'JR. ENNG', 'Management Inc.'),
+    (27, 27, 'DIRECTORS', 100000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (28, 28, 'HOD', 85000, 'JR. PRODUCER', 'Tech Solutions'),
+    (29, 29, 'PRODUCTION HEAD', 90000, 'ASS. HEAD', 'Creative Designs'),
+    (30, 30, 'SR. ENNG', 75000, 'DESIGNERS', 'Engineering World'),
+    (31, 31, 'MANAGER', 81000, 'JR. ENNG', 'Management Inc.'),
+    (32, 32, 'DIRECTORS', 101000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (33, 33, 'HOD', 86000, 'JR. PRODUCER', 'Tech Solutions'),
+    (34, 34, 'PRODUCTION HEAD', 91000, 'ASS. HEAD', 'Creative Designs'),
+    (35, 35, 'SR. ENNG', 76000, 'DESIGNERS', 'Engineering World'),
+    (36, 36, 'MANAGER', 82000, 'JR. ENNG', 'Management Inc.'),
+    (37, 37, 'DIRECTORS', 102000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (38, 38, 'HOD', 87000, 'JR. PRODUCER', 'Tech Solutions'),
+    (39, 39, 'PRODUCTION HEAD', 92000, 'ASS. HEAD', 'Creative Designs'),
+    (40, 40, 'SR. ENNG', 77000, 'DESIGNERS', 'Engineering World'),
+    (41, 41, 'MANAGER', 83000, 'JR. ENNG', 'Management Inc.'),
+    (42, 42, 'DIRECTORS', 103000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (43, 43, 'HOD', 88000, 'JR. PRODUCER', 'Tech Solutions'),
+    (44, 44, 'PRODUCTION HEAD', 93000, 'ASS. HEAD', 'Creative Designs'),
+    (45, 45, 'SR. ENNG', 78000, 'DESIGNERS', 'Engineering World'),
+    (46, 46, 'MANAGER', 84000, 'JR. ENNG', 'Management Inc.'),
+    (47, 47, 'DIRECTORS', 104000, 'ASS. MANAGER', 'XYZ Corp.'),
+    (48, 48, 'HOD', 89000, 'JR. PRODUCER', 'Tech Solutions'),
+    (49, 49, 'PRODUCTION HEAD', 94000, 'ASS. HEAD', 'Creative Designs'),
+    (50, 50, 'SR. ENNG', 79000, 'DESIGNERS', 'Engineering World');
+9) 
+CREATE TABLE DEPARTMENT (D_ID INT PRIMARY KEY, D_NAME VARCHAR(50),E_ID INT ,CONSTRAINT FK_E  FOREIGN KEY (E_ID) REFERENCES EMPLOYEE(E_ID),A_ID INT ,CONSTRAINT FK_A FOREIGN KEY (A_ID) REFERENCES ADMINISTRATION(A_ID));
+
+10)
+INSERT INTO DEPARTMENT (D_ID, D_NAME, E_ID, A_ID)
+VALUES
+(1, 'MARKETERS', 1, 1),
+(2, 'ACCOUNTS', 2, 2),
+(3, 'CONSTRUCTION', 3, 3),
+(4, 'PRODUCTION BOARD',4, 4),
+(5, 'DESIGNERS ASSEMBLY', 5, 5),
+(6, 'MARKETERS', 6, 6),
+(7, 'ACCOUNTS', 7, 7),
+(8, 'CONSTRUCTION', 8, 8),
+(9, 'PRODUCTION BOARD', 9, 9),
+(10, 'DESIGNERS ASSEMBLY', 10, 10),
+(11, 'MARKETERS', 11, 11),
+(12, 'ACCOUNTS', 12, 12),
+(13, 'CONSTRUCTION', 13, 13),
+(14, 'PRODUCTION BOARD', 14, 14),
+(15, 'DESIGNERS ASSEMBLY', 15, 15),
+(16, 'MARKETERS', 16, 16),
+(17, 'ACCOUNTS', 17, 17),
+(18, 'CONSTRUCTION', 18, 18),
+(19, 'PRODUCTION BOARD', 19, 19),
+(20, 'DESIGNERS ASSEMBLY', 20, 20),
+(21, 'MARKETERS', 21, 21),
+(22, 'ACCOUNTS', 22, 22),
+(23, 'CONSTRUCTION', 23, 23),
+(24, 'PRODUCTION BOARD', 24, 24),
+(25, 'DESIGNERS ASSEMBLY', 25, 25),
+(26, 'MARKETERS', 26, 26),
+(27, 'ACCOUNTS', 27, 27),
+(28, 'CONSTRUCTION', 28, 28),
+(29, 'PRODUCTION BOARD', 29, 29),
+(30, 'DESIGNERS ASSEMBLY', 30, 30),
+(31, 'MARKETERS', 31, 31),
+(32, 'ACCOUNTS', 32, 32),
+(33, 'CONSTRUCTION', 33, 33),
+(34, 'PRODUCTION BOARD', 34, 34),
+(35, 'DESIGNERS ASSEMBLY', 35, 35),
+(36, 'MARKETERS', 36, 36),
+(37, 'ACCOUNTS', 37, 37),
+(38, 'CONSTRUCTION', 38,38),
+(39, 'PRODUCTION BOARD', 39, 39),
+(40, 'DESIGNERS ASSEMBLY', 40, 40),
+(41, 'MARKETERS', 41, 41),
+(42, 'ACCOUNTS', 42, 42),
+(43, 'CONSTRUCTION', 43, 43),
+(44, 'PRODUCTION BOARD', 44, 44),
+(45, 'DESIGNERS ASSEMBLY', 45, 45),
+(46, 'MARKETERS', 46,46),
+(47, 'ACCOUNTS',47, 47),
+(48, 'CONSTRUCTION', 48, 48),
+(49, 'PRODUCTION BOARD', 49, 49),
+(50, 'DESIGNERS ASSEMBLY', 50, 50);
+

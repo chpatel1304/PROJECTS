@@ -1,0 +1,11 @@
+=============================================================
+| Employee ID :2
+| Employee NAME:Chirag
+| MONTH       SALARY      BONUS       DAYS ABSENT     FINAL SALARY
+October|     20000      30000     8        45000
+==========================================================================================================================
+| Employee ID :2
+| Employee NAME:Chirag
+| MONTH       SALARY      BONUS       DAYS ABSENT     FINAL SALARY
+| August     20000          0       2         19000
+=============================================================
